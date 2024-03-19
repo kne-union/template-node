@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Publish Npm
-        uses: kne-union/template-node/.github/workflows/publish-npm-workflow.yml@master
+        uses: kne-union/actions/.github/workflows/publish-npm-workflow.yml@master
         with:
           name: @kne-template/node
           NODE_AUTH_TOKEN: ${{secrets.KNE_PACKAGE_PUBLISH}}

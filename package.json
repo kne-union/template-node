@@ -5,12 +5,9 @@
   "scripts": {
     "build:md": "npx @kne/md-doc",
     "start:md": "npx @kne/md-doc --watch",
-    "prettier": "prettier --config .prettierrc --write '{src/**/*,index,prompts}.{js,jsx,ts,tsx,json,css,scss}'"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "prettier": "prettier --config .prettierrc --write '{src/**/*,index,prompts}.{js,jsx,ts,tsx,json,css,scss}'",
+    "prepare": "husky",
+    "lint-staged": "npx lint-staged"
   },
   "lint-staged": {
     "{src/**/*,index,prompts}.{js,jsx,ts,tsx,json,css,scss}": [

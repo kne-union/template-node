@@ -8,11 +8,6 @@
     "start:md": "npx @kne/md-doc --watch",
     "prettier": "prettier --config .prettierrc --write '{libs/**/*,index}.{js,jsx,ts,tsx,json,css,scss}'"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "{libs/**/*,index}.{js,jsx,ts,tsx,json,css,scss}": [
       "prettier --config .prettierrc --write",
@@ -36,6 +31,7 @@
   "homepage": "https://github.com/kne-union/<%=name.replace(/^\\@.+\\//,'')%>#readme",
   "devDependencies": {
     "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.2.5"
   }
 }

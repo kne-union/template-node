@@ -17,7 +17,6 @@ jobs:
   publish-npm:
     needs: checkout
     uses: kne-union/actions/.github/workflows/publish-npm-workflow.yml@master
-    secrets:
-      NODE_AUTH_TOKEN: ${{secrets.KNE_PACKAGE_PUBLISH}}
+    secrets: inherit
     with:
       package_name: '@kne-template/node'

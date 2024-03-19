@@ -14,5 +14,5 @@ jobs:
       - name: Publish Npm
         uses: kne-union/actions/.github/workflows/publish-npm-workflow.yml@master
         with:
-          packageName: @kne/<%=name%>
+          package_name: '@kne/<%=name%>'
           NODE_AUTH_TOKEN: ${{secrets.KNE_PACKAGE_PUBLISH}}

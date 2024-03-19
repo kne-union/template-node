@@ -1,6 +1,6 @@
 {
   "name": "@kne-template/node",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "node包初始化模板",
   "scripts": {
     "build:md": "npx @kne/md-doc",

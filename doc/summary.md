@@ -3,3 +3,5 @@
 ```shell
 npx @kne/npm-tools init @kne/template-node
 ```
+
+[更多文档](https://www.kne-union.top/#/template/node%>)

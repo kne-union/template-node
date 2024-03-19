@@ -1,0 +1,16 @@
+[
+  {
+    "type": "input",
+    "name": "name",
+    "options": {
+      "message": "请输入包名<注意会自动添加@kne，这里不需要添加>"
+    }
+  },
+  {
+    "type": "input",
+    "name": "description",
+    "options": {
+      "message": "请输入包描述信息"
+    }
+  }
+]

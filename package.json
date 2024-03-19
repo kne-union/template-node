@@ -1,0 +1,42 @@
+{
+  "name": "@kne-template/node",
+  "version": "0.1.0",
+  "description": "node包初始化模板",
+  "scripts": {
+    "build:md": "npx create-md",
+    "start:md": "npx create-md --watch",
+    "prettier": "prettier --config .prettierrc --write '{src/**/*,index,prompts}.{js,jsx,ts,tsx,json,css,scss}'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "{src/**/*,index,prompts}.{js,jsx,ts,tsx,json,css,scss}": [
+      "prettier --config .prettierrc --write",
+      "git add"
+    ]
+  },
+  "files": [
+    "prompts.json",
+    "template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kne-union/template-node.git"
+  },
+  "keywords": [
+    "template"
+  ],
+  "author": "linzp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kne-union/template-node/issues"
+  },
+  "homepage": "https://github.com/kne-union/template-node#readme",
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5"
+  }
+}

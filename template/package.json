@@ -1,0 +1,41 @@
+{
+  "name": "@kne/<%=name%>",
+  "version": "0.1.0",
+  "description": "<%=description%>",
+  "main": "index.js",
+  "scripts": {
+    "build:md": "npx create-md",
+    "start:md": "npx create-md --watch",
+    "prettier": "prettier --config .prettierrc --write '{libs/**/*,index}.{js,jsx,ts,tsx,json,css,scss}'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "{libs/**/*,index}.{js,jsx,ts,tsx,json,css,scss}": [
+      "prettier --config .prettierrc --write",
+      "git add"
+    ]
+  },
+  "files": [
+    "index.js",
+    "libs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kne-union/<%=name%>.git"
+  },
+  "keywords": [],
+  "author": "linzp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kne-union/<%=name%>/issues"
+  },
+  "homepage": "https://github.com/kne-union/<%=name%>#readme",
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5"
+  }
+}

@@ -10,4 +10,4 @@ jobs:
     uses: kne-union/actions/.github/workflows/publish-node-workflow.yml@master
     secrets: inherit
     with:
-      package_name: '<%=name%>'
+      package_name: '<%=packageName%>'

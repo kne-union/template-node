@@ -1,5 +1,5 @@
 {
-  "name": "<%=name%>",
+  "name": "<%=packageName%>",
   "version": "0.1.0",
   "description": "<%=description%>",
   "main": "index.js",
@@ -22,15 +22,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kne-union/<%=name.replace(/^\\@.+\\//,'')%>.git"
+    "url": "git+https://github.com/kne-union/<%=name%>.git"
   },
   "keywords": [],
   "author": "linzp",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kne-union/<%=name.replace(/^\\@.+\\//,'')%>/issues"
+    "url": "https://github.com/kne-union/<%=name%>/issues"
   },
-  "homepage": "https://github.com/kne-union/<%=name.replace(/^\\@.+\\//,'')%>#readme",
+  "homepage": "https://github.com/kne-union/<%=name%>#readme",
   "devDependencies": {
     "husky": "^9.0.11",
     "prettier": "^3.2.5"

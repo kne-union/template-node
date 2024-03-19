@@ -1,3 +1,3 @@
-# <%=name.replace(/^\@.+\//,'')%>
+# <%=name%>
 
 [更多文档](https://www.kne-union.top/#/node-libs/<%=name.replace(/^\@.+\//,'')%>)

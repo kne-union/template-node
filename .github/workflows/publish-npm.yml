@@ -7,13 +7,7 @@ on:
 jobs:
   publish-npm:
     if: github.event.pull_request.merged == true
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Publish To Npm
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
-        run: npm publish --access=public
-
-      - name: Sync To Cnpm
-        run: npx cnpm sync @kne-template/node
+    uses: kne-union/actions/.github/workflows/publish-npm-workflow.yml@master
+    with:
+      NODE_AUTH_TOKEN: ${{secrets.KNE_PACKAGE_PUBLISH}}
+      package_name: '@kne-template/node'

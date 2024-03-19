@@ -5,15 +5,9 @@ on:
     types:
       - closed
 jobs:
-  publish-npm:
+  node-npm:
     if: github.event.pull_request.merged == true
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Publish To Npm
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.KNE_PACKAGE_PUBLISH}}
-        run: npm publish --access=public
-
-      - name: Sync To Cnpm
-        run: npx cnpm sync <%=name%>
+    uses: kne-union/actions/.github/workflows/publish-node-workflow.yml@master
+    secrets: inherit
+    with:
+      package_name: '<%=name%>'

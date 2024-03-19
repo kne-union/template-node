@@ -1,6 +1,6 @@
 {
   "name": "@kne-template/node",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "node包初始化模板",
   "scripts": {
     "init": "husky",

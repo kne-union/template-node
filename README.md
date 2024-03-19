@@ -22,6 +22,8 @@ npm i --save @kne-template/node
 npx @kne/npm-tools init @kne/template-node
 ```
 
+[更多文档](https://www.kne-union.top/#/template/node%>)
+
 
 ### 示例
 
@@ -31,4 +33,7 @@ npx @kne/npm-tools init @kne/template-node
 
 ### API
 
+| 属性名 | 说明 | 类型 | 默认值 |
+|-----|----|----|-----|
+|     |    |    |     |
 

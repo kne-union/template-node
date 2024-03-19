@@ -1,9 +1,9 @@
 name: Publish Npm Package
-
 on:
-  push:
-    branches:
-      - master
+  pull_request:
+    branches: [master]
+    types:
+      - closed
 jobs:
   publish-npm:
     if: github.event.pull_request.merged == true
@@ -13,5 +13,5 @@ jobs:
       - name: Publish Npm
         uses: kne-union/actions/.github/workflows/publish-npm-workflow.yml@master
         with:
-          name: @kne-template/node
+          packageName: @kne-template/node
           NODE_AUTH_TOKEN: ${{secrets.KNE_PACKAGE_PUBLISH}}

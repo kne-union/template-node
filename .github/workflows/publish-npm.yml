@@ -1,0 +1,17 @@
+name: Publish Npm Package
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  publish-npm:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish Npm
+        uses: kne-union/template-node/.github/workflows/publish-npm-workflow.yml@master
+        with:
+          name: @kne-template/node
+          NODE_AUTH_TOKEN: ${{secrets.KNE_PACKAGE_PUBLISH}}

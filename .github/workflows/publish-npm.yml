@@ -6,7 +6,7 @@ on:
       - closed
 jobs:
   node-npm:
-    needs: checkout
+    if: github.event.pull_request.merged == true
     uses: kne-union/actions/.github/workflows/publish-node-workflow.yml@master
     secrets: inherit
     with:

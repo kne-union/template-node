@@ -5,10 +5,19 @@ on:
     types:
       - closed
 jobs:
-  publish-npm:
+  checkout:
     if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: build-dist
+          path: ./
+  publish-npm:
+    needs: checkout
     uses: kne-union/actions/.github/workflows/publish-npm-workflow.yml@master
     secrets:
       NODE_AUTH_TOKEN: ${{secrets.KNE_PACKAGE_PUBLISH}}
     with:
-      package_name: '@kne-template/node'
+      package_name: @kne-template/node

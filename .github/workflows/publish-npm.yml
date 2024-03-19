@@ -10,4 +10,4 @@ jobs:
     uses: kne-union/actions/.github/workflows/publish-npm-workflow.yml@master
     with:
       NODE_AUTH_TOKEN: ${{secrets.KNE_PACKAGE_PUBLISH}}
-      package_name: @kne-template/node
+      package_name: '@kne-template/node'

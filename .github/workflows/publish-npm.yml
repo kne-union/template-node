@@ -10,8 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Publish Npm
-        uses: kne-union/actions/.github/workflows/publish-npm-workflow.yml@master
-        with:
-          package_name: '@kne-template/node'
-          NODE_AUTH_TOKEN: ${{secrets.KNE_PACKAGE_PUBLISH}}
+      - name: Publish To Npm
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
+        run: npm publish --access=public
+
+      - name: Sync To Cnpm
+        run: npx cnpm sync @kne-template/node

@@ -8,6 +8,7 @@ jobs:
   publish-npm:
     if: github.event.pull_request.merged == true
     uses: kne-union/actions/.github/workflows/publish-npm-workflow.yml@master
-    with:
+    secrets:
       NODE_AUTH_TOKEN: ${{secrets.KNE_PACKAGE_PUBLISH}}
+    with:
       package_name: '@kne-template/node'

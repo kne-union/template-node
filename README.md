@@ -22,7 +22,7 @@ npm i --save @kne-template/node
 npx @kne/npm-tools init @kne/template-node
 ```
 
-[更多文档](https://www.kne-union.top/#/template/node%>)
+[更多文档](https://www.kne-union.top/#/templates/node)
 
 
 ### 示例
